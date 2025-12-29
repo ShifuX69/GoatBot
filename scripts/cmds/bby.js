@@ -57,7 +57,7 @@ module.exports.onStart = async ({ api, event, args }) => {
       );
 
       return api.sendMessage(
-        `âœ… Teacher: ${teacherName}\nðŸ“š Teach Count: ${currentCount + 1}\nLearned:\n"${ask}" âžœ "${ans}"`,
+        `✅ Teacher: ${teacherName}\n📚 Teach Count: ${currentCount + 1}\nLearned:\n"${ask}" ➜ "${ans}"`,
         event.threadID,
         event.messageID
       );
@@ -70,7 +70,7 @@ module.exports.onStart = async ({ api, event, args }) => {
       const userCount = teachCounts.get(uid) || 0;
       
       return api.sendMessage(
-        `ðŸ“Š Teaching Statistics:\n\nðŸ‘¤ Name: ${userName}\nðŸ“š Total Teachings: ${userCount}`,
+        `📊 Teaching Statistics:\n\n👤 Name: ${userName}\n📚 Total Teachings: ${userCount}`,
         event.threadID,
         event.messageID
       );
